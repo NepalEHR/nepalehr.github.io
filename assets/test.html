@@ -12,25 +12,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
 
-<script type="text/javascript">
-
-var base = 'https://dhis2.nepalehr.org/';
-
-function setLinks() {
-  jQuery("#chart1").attr("src", base + "api/charts/d10bk03XNz4/data");
-  jQuery("#chart2").attr("src", base + "api/charts/c668WN0rX4o/data");
-  jQuery("#chart3").attr("src", base + "api/charts/rYfXg75Gtzz/data");
-}
-
-jQuery(document).ready(function() {
-  $.post( base + "/dhis-web-commons/security/login.action", {
-      j_username: "impactreport", j_password: "Possible1"
-    },
-    setLinks
-  );
-});
-
+<script>
+chartPlugin.url = "https://dhis2.nepalehr.org/";
+chartPlugin.username = "impactreport";
+chartPlugin.password = "Possible1";
+chartPlugin.load([{
+  "id": "b3q2Ous16Ob",
+  "url": "https://dhis2.nepalehr.org/",
+  "el": "chart1"
+}]);
 </script>
+
 
 </head>
 <body>
