@@ -22,7 +22,7 @@ function setLinks() {
 }
 
 jQuery(document).ready(function() {
-  $.post( base + "dhis-web-commons/security/login.action", {
+  $.post( base + "/dhis-web-commons/security/login.action", {
       j_username: "impactreport", j_password: "Possible1"
     },
     setLinks
