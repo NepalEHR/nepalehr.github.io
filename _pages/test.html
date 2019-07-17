@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
 
-var base = 'dhis2.ehrnepal.org/';
+var base = 'https://dhis2.nepalehr.org/';
 
 function setLinks() {
   jQuery("#chart1").attr("src", base + "api/charts/c668WN0rX4o/data");
@@ -21,7 +21,7 @@ function setLinks() {
 
 jQuery(document).ready(function() {
   $.post( base + "dhis-web-commons-security/login.action?authOnly=true", {
-      j_username: "anant", j_password: "Anant123"
+      j_username: "impactreport", j_password: "Possible1"
     },
     setLinks
   );
